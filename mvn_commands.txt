@@ -1,0 +1,28 @@
+To create a new mvn project
+============================
+
+mvn archetype:generate -DgroupId=com.manish.progs -DartifactId=program-codes -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+To create parent multi-module project
+=====================================
+
+https://maven.apache.org/plugins/maven-eclipse-plugin/reactor.html
+
+
+
+<build>
+		<pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
